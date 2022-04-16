@@ -117,4 +117,15 @@ router.get("/logout", auth, async (req, res) => {
   }
 });
 
+router.get("/expenses", auth, (req, res) => {
+  res.render("expenses", {
+    users: req.user,
+  });
+});
+
+router.get("/calendar", auth, (req, res) => {
+  res.render("calendar", {
+    users: req.user,
+  });
+});
 module.exports = router;
