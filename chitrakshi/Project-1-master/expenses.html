@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="background_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>Expenses</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" -->
+    <!-- integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    <!-- <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script&gt; -->
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['College Fee', 11],
+                ['Laundry', 2],
+                ['Grocery', 2],
+                ['Food', 2],
+                ['Bills', 7]
+            ]);
+
+            var options = {
+                title: 'Expenditure Tracker',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Expenses</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Compose</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="calendar.html">My Activity</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="class">
+        <div id="piechart_3d" class="chart" style="width: 900px; height: 500px;"></div>
+    </div>
+
+
+</body>
+
+</html>
