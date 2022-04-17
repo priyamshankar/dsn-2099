@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="calendar_styles.css"> -->
     <title>My Activity</title>
     <style>
-        .event-container {
-    font-family: "Roboto", sans-serif;
-    max-width:800px;
-    margin: 0 auto;
-}
+      .event-container {
+        font-family: "Roboto", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+      }
 
-.event-container h3.year {
-    font-size:40px;
-    text-align: center;
-    border-bottom: 1px solid #b1b1b1;
-}
+      .event-container h3.year {
+        font-size: 40px;
+        text-align: center;
+        border-bottom: 1px solid #b1b1b1;
+      }
 
-.event-container .event {
-    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    border-radius: 8px;
-    margin: 32px 0;
-}
+      .event-container .event {
+        box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+        display: flex;
+        border-radius: 8px;
+        margin: 32px 0;
+      }
 
-.event .event-left {
-    background: #222;
-    min-width:82px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color: #eee;
-    padding:8px 48px;
-    font-weight:bold;
-    text-align:center;
-    border-radius: 8px 0 0 8px;
-}
+      .event .event-left {
+        background: #222;
+        min-width: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #eee;
+        padding: 8px 48px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 8px 0 0 8px;
+      }
 
-.event .event-left .date {
-    font-size:56px;
-}
+      .event .event-left .date {
+        font-size: 56px;
+      }
 
-.event .event-left .month {
-    font-size: 16px;
-    font-weight: normal;
-}
+      .event .event-left .month {
+        font-size: 16px;
+        font-weight: normal;
+      }
 
-.event .event-right {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding: 0 24px;
-}
+      .event .event-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+      }
 
-.event .event-right h3.event-title {
-    font-size: 24px;
-    margin: 24px 0 10px 0;
-    color: #218bbb;
-    text-transform: uppercase;
-}
-
-.event .event-right .event-timing {
-    background: #fff8ba;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    padding: 8px;
-    border-radius: 16px;
-    margin: 24px 0;
-    font-size:14px;
-}
-
-.event .event-right .event-timing
-img{
-    height:20px;
-    padding-right: 8px;
-}
-
-@media (max-width:600px){
-    .event {
-        flex-direction:column;
-    }
-
-    .event .event-left {
-        padding:0;
-        border-radius:8px 8px 0 0;
-    }
-
-    .event .event-left .event-date .date,
-    .event .event-left .event-date .month {
-        display: inline-block;
+      .event .event-right h3.event-title {
         font-size: 24px;
-    }
+        margin: 24px 0 10px 0;
+        color: #218bbb;
+        text-transform: uppercase;
+      }
 
-    .event .event-left .event-date {
-        padding: 10px 0;
-    }
-}
-* {
+      .event .event-right .event-timing {
+        background: #fff8ba;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        padding: 8px;
+        border-radius: 16px;
+        margin: 24px 0;
+        font-size: 14px;
+      }
+
+      .event .event-right .event-timing img {
+        height: 20px;
+        padding-right: 8px;
+      }
+
+      @media (max-width: 600px) {
+        .event {
+          flex-direction: column;
+        }
+
+        .event .event-left {
+          padding: 0;
+          border-radius: 8px 8px 0 0;
+        }
+
+        .event .event-left .event-date .date,
+        .event .event-left .event-date .month {
+          display: inline-block;
+          font-size: 24px;
+        }
+
+        .event .event-left .event-date {
+          padding: 10px 0;
+        }
+      }
+      * {
         box-sizing: border-box;
       }
 
@@ -205,109 +204,111 @@ img{
         }
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('navbar') -%>
 
-
     <div class="event-container">
-        <h3 class="year">2022</h3>
+      <h3 class="year">2022</h3>
 
-        <div class="event">
-            <div class="event-left">
-
-                <div class="date">8</div>
-                <div class="month">March</div>
-
-            </div>
-            <div class="event-right">
-
-                <h3 class="event-title">Activity Name Here</h3>
-                <div class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius ipsum veritatis perspiciatis consequatur, doloremque natus fugiat harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam totam ratione.</div>
-                <div class="event-timing">
-                    <img src="image.jpg" height="20" width="20" alt="">10:00 am
-                </div>
-
-            </div>
+      <div class="event">
+        <div class="event-left">
+          <div class="date">8</div>
+          <div class="month">March</div>
         </div>
-
-        <div class="event">
-            <div class="event-left">
-
-                <div class="date">8</div>
-                <div class="month">March</div>
-
-            </div>
-            <div class="event-right">
-
-                <h3 class="event-title">Activity Name Here</h3>
-                <div class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius ipsum veritatis perspiciatis consequatur, doloremque natus fugiat harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam totam ratione.</div>
-                <div class="event-timing">
-                    <img src="image.jpg" height="20" width="20" alt="">10:00 am
-                </div>
-
-            </div>
+        <div class="event-right">
+          <h3 class="event-title">Activity Name Here</h3>
+          <div class="event-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius
+            ipsum veritatis perspiciatis consequatur, doloremque natus fugiat
+            harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam
+            totam ratione.
+          </div>
+          <div class="event-timing">
+            <img src="image.jpg" height="20" width="20" alt="" />10:00 am
+          </div>
         </div>
+      </div>
 
-        <h3 class="year">2021</h3>
-
-        <div class="event">
-            <div class="event-left">
-
-                <div class="date">8</div>
-                <div class="month">March</div>
-
-            </div>
-            <div class="event-right">
-
-                <h3 class="event-title">Activity Name Here</h3>
-                <div class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius ipsum veritatis perspiciatis consequatur, doloremque natus fugiat harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam totam ratione.</div>
-                <div class="event-timing">
-                    <img src="image.jpg" height="20" width="20" alt="">10:00 am
-                </div>
-
-            </div>
+      <div class="event">
+        <div class="event-left">
+          <div class="date">8</div>
+          <div class="month">March</div>
         </div>
-
-        <div class="event">
-            <div class="event-left">
-
-                <div class="date">8</div>
-                <div class="month">March</div>
-
-            </div>
-            <div class="event-right">
-
-                <h3 class="event-title">Activity Name Here</h3>
-                <div class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius ipsum veritatis perspiciatis consequatur, doloremque natus fugiat harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam totam ratione.</div>
-                <div class="event-timing">
-                    <img src="image.jpg" height="20" width="20" alt="">10:00 am
-                </div>
-
-            </div>
+        <div class="event-right">
+          <h3 class="event-title">Activity Name Here</h3>
+          <div class="event-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius
+            ipsum veritatis perspiciatis consequatur, doloremque natus fugiat
+            harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam
+            totam ratione.
+          </div>
+          <div class="event-timing">
+            <img src="image.jpg" height="20" width="20" alt="" />10:00 am
+          </div>
         </div>
+      </div>
 
-        <h3 class="year">2020</h3>
+      <h3 class="year">2021</h3>
 
-        <div class="event">
-            <div class="event-left">
-
-                <div class="date">8</div>
-                <div class="month">March</div>
-
-            </div>
-            <div class="event-right">
-
-                <h3 class="event-title">Activity Name Here</h3>
-                <div class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius ipsum veritatis perspiciatis consequatur, doloremque natus fugiat harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam totam ratione.</div>
-                <div class="event-timing">
-                    <img src="image.jpg" height="20" width="20" alt="">10:00 am
-                </div>
-
-            </div>
+      <div class="event">
+        <div class="event-left">
+          <div class="date">8</div>
+          <div class="month">March</div>
         </div>
+        <div class="event-right">
+          <h3 class="event-title">Activity Name Here</h3>
+          <div class="event-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius
+            ipsum veritatis perspiciatis consequatur, doloremque natus fugiat
+            harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam
+            totam ratione.
+          </div>
+          <div class="event-timing">
+            <img src="image.jpg" height="20" width="20" alt="" />10:00 am
+          </div>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-left">
+          <div class="date">8</div>
+          <div class="month">March</div>
+        </div>
+        <div class="event-right">
+          <h3 class="event-title">Activity Name Here</h3>
+          <div class="event-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius
+            ipsum veritatis perspiciatis consequatur, doloremque natus fugiat
+            harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam
+            totam ratione.
+          </div>
+          <div class="event-timing">
+            <img src="image.jpg" height="20" width="20" alt="" />10:00 am
+          </div>
+        </div>
+      </div>
+
+      <h3 class="year">2020</h3>
+
+      <div class="event">
+        <div class="event-left">
+          <div class="date">8</div>
+          <div class="month">March</div>
+        </div>
+        <div class="event-right">
+          <h3 class="event-title">Activity Name Here</h3>
+          <div class="event-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eius
+            ipsum veritatis perspiciatis consequatur, doloremque natus fugiat
+            harum labore dolore eaque eos unde nisi, ipsam quae cumque quisquam
+            totam ratione.
+          </div>
+          <div class="event-timing">
+            <img src="image.jpg" height="20" width="20" alt="" />10:00 am
+          </div>
+        </div>
+      </div>
     </div>
-
-    
-</body>
+  </body>
 </html>

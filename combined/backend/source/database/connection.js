@@ -51,7 +51,7 @@ router.post("/registration", async (req, res) => {
       });
       res.render("loginPage");
     } else {
-      res.send("password didn't matche");
+      res.send("password didn't match");
     }
   } catch (err) {
     console.log(err);
