@@ -34,5 +34,5 @@ userDetSchema.methods.generateAuthToken = async function () {
     }
 }
 
-const userDetModel = new mongoose.model("userDetails1", userDetSchema);
+const userDetModel = new mongoose.model("userDetails2", userDetSchema);
 module.exports = userDetModel;
